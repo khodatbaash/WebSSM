@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c6e8d3c9-db98-470d-a374-fc8e7eaf851e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../python/readVisPointCloud.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../python/readVisPointCloud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/dynamicPage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../web/dynamicPage/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../web/project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/project/dist/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../web/project/dist/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/project/src/cone.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../web/project/src/cone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/.idea/readVisPointCloud.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/dist/alpha.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/dist/basisMatrix.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/dist/dec.vtk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/dist/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/dist/jquery-csv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/dist/jquery.csv.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/dist/meanShape.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/dist/meanVector - Copy.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/dist/meanVector.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/dist/read_csv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/dist/stddev.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/dist/temp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/src/cone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/src/controller.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/readVisPointCloud/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/stlReader/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/stlReader/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/stlReader/.idea/stlReader.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/stlReader/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/stlReader/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/stlReader/dist/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/stlReader/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/stlReader/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/stlReader/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/stlReader/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../web/stlReader/webpack.config.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1lj60rCaGgR8qBy3ydGRQzpQStx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6e8d3c9-db98-470d-a374-fc8e7eaf851e" name="Default Changelist" comment="" />
+      <created>1608097944555</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608097944555</updated>
+      <workItem from="1608097955514" duration="7046000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
