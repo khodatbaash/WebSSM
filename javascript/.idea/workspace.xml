@@ -40,12 +40,8 @@
       <change afterPath="$PROJECT_DIR$/../../web/project-dualView+surface/dist/stddev2.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../web/project-dualview/src/controller2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flask/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../flask/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flask/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../flask/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flask/reconstructSurface.py" beforeDir="false" afterPath="$PROJECT_DIR$/../flask/reconstructSurface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cone.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cone.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../flask/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../flask/.idea/flask.iml" beforeDir="false" />
@@ -787,6 +783,69 @@
       <change beforePath="$PROJECT_DIR$/../../flask/venv/Scripts/python.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../flask/venv/Scripts/pythonw.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../flask/venv/pyvenv.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__ch_unibas_cs_gravis_scalismo_2_12_0_17_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__ch_unibas_cs_gravis_scalismo_native_all_4_0_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__ch_unibas_cs_gravis_scalismo_native_stub_4_0_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__ch_unibas_cs_gravis_scalismo_ui_2_12_0_13_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_chuusai_shapeless_2_12_2_3_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_jniloader_1_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_core_1_1_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_native_ref_java_1_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_native_system_java_1_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_netlib_native_ref_linux_armhf_1_1_natives_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_netlib_native_ref_linux_i686_1_1_natives_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_netlib_native_ref_linux_x86_64_1_1_natives_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_netlib_native_ref_osx_x86_64_1_1_natives_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_netlib_native_ref_win_i686_1_1_natives_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_netlib_native_ref_win_x86_64_1_1_natives_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_netlib_native_system_linux_armhf_1_1_natives_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_netlib_native_system_linux_i686_1_1_natives_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_netlib_native_system_linux_x86_64_1_1_natives_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_netlib_native_system_osx_x86_64_1_1_natives_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_netlib_native_system_win_i686_1_1_natives_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_fommil_netlib_netlib_native_system_win_x86_64_1_1_natives_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_ghik_silencer_lib_0_4_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_jiconfont_jiconfont_1_0_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_jiconfont_jiconfont_elusive_2_0_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_jiconfont_jiconfont_entypo_2_0_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_jiconfont_jiconfont_font_awesome_4_5_0_3_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_jiconfont_jiconfont_swing_1_0_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__com_github_rwl_jtransforms_2_4_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__de_sciss_swingplus_2_12_0_2_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__io_spray_spray_json_2_12_1_3_3_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__junit_junit_4_8_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__net_sf_opencsv_opencsv_2_3_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__net_sourceforge_f2j_arpack_combined_all_0_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__org_apache_commons_commons_math3_3_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__org_scala_lang_modules_scala_swing_2_12_2_0_0_M2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__org_scala_lang_scala_library_2_12_6_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__org_scala_lang_scala_reflect_2_12_6_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__org_scalanlp_breeze_2_12_0_13_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__org_scalanlp_breeze_macros_2_12_0_13_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__org_scalanlp_breeze_natives_2_12_0_13_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__org_slf4j_slf4j_api_1_7_5_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__org_slf4j_slf4j_nop_1_6_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__org_spire_math_spire_2_12_0_13_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__org_spire_math_spire_macros_2_12_0_13_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__org_typelevel_machinist_2_12_0_6_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/libraries/sbt__org_typelevel_macro_compat_2_12_1_1_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/modules/minimal-scalismo-seed-build.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/modules/minimal-scalismo-seed.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/sbt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/scala_compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/activator.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/build.sbt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/hs_err_pid7520.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/build.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/plugins.sbt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../scala/project/project/target/config-classes/$3791db92ef0ebcdcc7b5$.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../scala/project/project/target/config-classes/$3791db92ef0ebcdcc7b5.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../scala/project/project/target/config-classes/$3791db92ef0ebcdcc7b5.class" beforeDir="false" />
@@ -846,20 +905,165 @@
       <change beforePath="$PROJECT_DIR$/../../scala/project/target/config-classes/$ed3822c89fb65844ad79$.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../scala/project/target/config-classes/$ed3822c89fb65844ad79.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../scala/project/target/config-classes/$ed3822c89fb65844ad79.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/update/$global/streams/update_cache_2.10/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/project/target/streams/$global/update/$global/streams/update_cache_2.10/inputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/project/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/project/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/project/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/src/main/scala/com/example/chkEigens.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/src/main/scala/com/example/chkEigens.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/target/.history" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/classes/com/example/chkEigens$.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../scala/target/scala-2.12/classes/com/example/chkEigens$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/default/minimal-scalismo-seed-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/default/minimal-scalismo-seed-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/default/root-4-shape_model_generation-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/default/root-4-shape_model_generation-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/default/ssm_generation-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/default/ssm_generation-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minimal-scalismo-seed-build-compile-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minimal-scalismo-seed-build-compile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minimal-scalismo-seed-build-docs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minimal-scalismo-seed-build-optional.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minimal-scalismo-seed-build-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minimal-scalismo-seed-build-pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minimal-scalismo-seed-build-provided.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minimal-scalismo-seed-build-runtime-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minimal-scalismo-seed-build-runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minimal-scalismo-seed-build-scala-tool.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minimal-scalismo-seed-build-sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minimal-scalismo-seed-build-test-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-minimal-scalismo-seed-build-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-root-4-shape_model_generation-build-compile-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-root-4-shape_model_generation-build-compile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-root-4-shape_model_generation-build-docs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-root-4-shape_model_generation-build-optional.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-root-4-shape_model_generation-build-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-root-4-shape_model_generation-build-pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-root-4-shape_model_generation-build-provided.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-root-4-shape_model_generation-build-runtime-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-root-4-shape_model_generation-build-runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-root-4-shape_model_generation-build-scala-tool.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-root-4-shape_model_generation-build-sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-root-4-shape_model_generation-build-test-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-root-4-shape_model_generation-build-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-ssm_generation-build-compile-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-ssm_generation-build-compile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-ssm_generation-build-docs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-ssm_generation-build-optional.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-ssm_generation-build-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-ssm_generation-build-pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-ssm_generation-build-provided.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-ssm_generation-build-runtime-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-ssm_generation-build-runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-ssm_generation-build-scala-tool.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-ssm_generation-build-sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-ssm_generation-build-test-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-ssm_generation-build-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/ivy-report.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/ivy-report.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/$global/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/input_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/ivySbt/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/projectDescriptors/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/update/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/update/$global/streams/update_cache_2.10/inputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/$global/updateSbtClassifiers/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/$global/$global/discoveredMainClasses/data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/compile/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/copyResources/$global/streams/copy-resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/internalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/unmanagedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/compile/unmanagedJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/unmanagedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/project/target/streams/runtime/unmanagedJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/src/main/scala/com/example/chkEigens.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/.history" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/classes/META-INF/minimal-scalismo-seed.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/classes/com/example/chkEigens$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/classes/com/example/chkEigens.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/ch.unibas.cs.gravis/minimal-scalismo-seed$sources_2.12/0.6/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/ch.unibas.cs.gravis/minimal-scalismo-seed$sources_2.12/0.6/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/ch.unibas.cs.gravis/minimal-scalismo-seed_2.12/0.6/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/ch.unibas.cs.gravis/minimal-scalismo-seed_2.12/0.6/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/org.scala-sbt.temp/temp-module-750703454be73072ce64f1c215ff85550284ae5b/0.13.17/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/org.scala-sbt.temp/temp-module-750703454be73072ce64f1c215ff85550284ae5b/0.13.17/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed$sources_2.12-compile-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed$sources_2.12-compile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed$sources_2.12-docs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed$sources_2.12-optional.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed$sources_2.12-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed$sources_2.12-pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed$sources_2.12-provided.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed$sources_2.12-runtime-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed$sources_2.12-runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed$sources_2.12-scala-tool.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed$sources_2.12-sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed$sources_2.12-test-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed$sources_2.12-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed_2.12-compile-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed_2.12-compile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed_2.12-docs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed_2.12-optional.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed_2.12-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed_2.12-pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed_2.12-provided.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed_2.12-runtime-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed_2.12-runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed_2.12-scala-tool.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed_2.12-sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed_2.12-test-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ch.unibas.cs.gravis-minimal-scalismo-seed_2.12-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ivy-report.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/ivy-report.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/scala-2.12/resolution-cache/reports/org.scala-sbt.temp-temp-module-750703454be73072ce64f1c215ff85550284ae5b-component.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/$global/$global/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/$global/$global/dumpStructure/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/$global/ivySbt/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/$global/projectDescriptors/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/$global/update/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/$global/updateSbtClassifiers/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/$global/$global/discoveredMainClasses/data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/compile/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/copyResources/$global/streams/copy-resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/internalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/mainClass/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/run/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/unmanagedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/compile/unmanagedJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/runtime/unmanagedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/runtime/unmanagedJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/test/unmanagedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/target/streams/test/unmanagedJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../scala/tutorial/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../server/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../server/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../server/.idea/misc.xml" beforeDir="false" />
@@ -969,7 +1173,7 @@
       <workItem from="1609662697843" duration="6813000" />
       <workItem from="1609679914010" duration="38071000" />
       <workItem from="1610534282933" duration="1530000" />
-      <workItem from="1610631256725" duration="15293000" />
+      <workItem from="1610631256725" duration="17665000" />
     </task>
     <servers />
   </component>

@@ -12,16 +12,16 @@ for (let i=0; i<window.alpha2[0].length; i++){
     window.alpha2[0][i]=0
 }
 function calculateInstanceMatrix(alpha, stddev, basisMatrix, meanVector, meanShape){
-    //console.log("alpha : "+alpha.length+"*"+alpha[0].length)
-    //console.log("stddev : "+stddev.length+"*"+stddev[0].length)
+    ////console.log("alpha : "+alpha.length+"*"+alpha[0].length)
+    ////console.log("stddev : "+stddev.length+"*"+stddev[0].length)
     var alpha_mul_stddev2 = math.dotMultiply(alpha, stddev); //1*16
 
-    //console.log("basisMatrix : "+basisMatrix.length+"*"+basisMatrix[0].length)
+    ////console.log("basisMatrix : "+basisMatrix.length+"*"+basisMatrix[0].length)
     var basis_transposed2 = math.transpose(basisMatrix); //16*window.basisMatrix1.length
-    //console.log("basis_transposed2 : "+basis_transposed2.length+"*"+basis_transposed2[0].length)
+    ////console.log("basis_transposed2 : "+basis_transposed2.length+"*"+basis_transposed2[0].length)
 
-    //console.log("alpha_mul_stddev2 : "+alpha_mul_stddev2.length+"*"+alpha_mul_stddev2[0].length)
-    //console.log("basis_transposed2 : "+basis_transposed2.length+"*"+basis_transposed2[0].length)
+    ////console.log("alpha_mul_stddev2 : "+alpha_mul_stddev2.length+"*"+alpha_mul_stddev2[0].length)
+    ////console.log("basis_transposed2 : "+basis_transposed2.length+"*"+basis_transposed2[0].length)
     var alstd_mul_bastran2 = math.multiply(alpha_mul_stddev2, basis_transposed2);
     var alstd_mulbastran_add_meaVec2 = math.add(alstd_mul_bastran2,meanVector)
     var instance2 = math.add(alstd_mulbastran_add_meaVec2, math.reshape(meanShape, [1,basisMatrix.length]))
@@ -112,11 +112,13 @@ function assembleSurface(bufPoints, bufCells, bufNormals){
     //polydata.getPoints().setnormal(normals)
 
     window['surface'] = polydata
-    console.log("surface assembled")
+    //console.log("surface assembled")
     return polydata
 }
 var polyData = instanceMatrix2vtkPolydata(instancePoints2, 1)
 var polyData4 = instanceMatrix2vtkPolydata(instancePoints4, 2)
+window["polyDataTemp1"] = polyData
+window["polyDataTemp2"] = polyData4
 var sm_max_num = 15
 
 //3-visualize point cloud
@@ -139,6 +141,9 @@ function setupController(containerId){
     let selector = document.createElement("select")
     selector.setAttribute("style", "width:100%;")
     selector.setAttribute("id", "selector"+containerId)
+    selector.addEventListener("change", function(){
+        refreshVisualization(window["polyDataTemp1"], window["polyDataTemp2"]);
+    })
     let selector_option0 = document.createElement("option");
     selector_option0.value="0"
     selector_option0.selected
@@ -174,8 +179,8 @@ function setupController(containerId){
                 document.getElementById("inp_sm"+i+"_cntr"+containerId).value = 0
             }
 
-            window["polyDataTemp1"] = polyData
-            window["polyDataTemp2"] = polyData4
+            //window["polyDataTemp1"] = polyData
+            //window["polyDataTemp2"] = polyData4
             instancePointsTemp = math.reshape(calculateInstanceMatrix(window[("alpha"+containerId)], window[("stddev"+containerId)], window[("basisMatrix"+containerId)], window[("meanVector"+containerId)], window[("meanShape"+containerId)]), [window[("basisMatrix"+containerId)].length/3, 3])
             window["polyDataTemp"+containerId] = instanceMatrix2vtkPolydata(instancePointsTemp, containerId)
             refreshVisualization(window["polyDataTemp1"], window["polyDataTemp2"]);
@@ -196,8 +201,8 @@ function setupController(containerId){
                 document.getElementById("inp_sm"+i+"_cntr"+containerId).value = window[("alpha"+containerId)][0][i]
             }
 
-            window["polyDataTemp1"] = polyData
-            window["polyDataTemp2"] = polyData4
+            //window["polyDataTemp1"] = polyData
+            //window["polyDataTemp2"] = polyData4
             instancePointsTemp = math.reshape(calculateInstanceMatrix(window[("alpha"+containerId)], window[("stddev"+containerId)], window[("basisMatrix"+containerId)], window[("meanVector"+containerId)], window[("meanShape"+containerId)]), [window[("basisMatrix"+containerId)].length/3, 3])
             window["polyDataTemp"+containerId] = instanceMatrix2vtkPolydata(instancePointsTemp, containerId)
             refreshVisualization(window["polyDataTemp1"], window["polyDataTemp2"]);
@@ -245,10 +250,10 @@ function setup_sm(container_nr, sm_nr){
     sm_rng.addEventListener('input', (e) => {
         sm_input.value = sm_rng.value;
         window[("alpha"+container_nr)][0][sm_nr] = sm_rng.value
-        window["polyDataTemp1"] = polyData
-        window["polyDataTemp2"] = polyData4
+        //window["polyDataTemp1"] = polyData
+        //window["polyDataTemp2"] = polyData4
         instancePointsTemp = math.reshape(calculateInstanceMatrix(window[("alpha"+container_nr)], window[("stddev"+container_nr)], window[("basisMatrix"+container_nr)], window[("meanVector"+container_nr)], window[("meanShape"+container_nr)]), [window[("basisMatrix"+container_nr)].length/3, 3])
-        //console.log("polyDataTemp"+container_nr+"sm"+sm_nr)
+        ////console.log("polyDataTemp"+container_nr+"sm"+sm_nr)
         window["polyDataTemp"+container_nr] = instanceMatrix2vtkPolydata(instancePointsTemp, container_nr)
         refreshVisualization(window["polyDataTemp1"], window["polyDataTemp2"]);
     });
@@ -315,7 +320,7 @@ function setupRendering(containerId){
 var renderWindow1, renderer1, mapper1, actor1;
 var renderWindow2, renderer2, mapper2, actor2;
 function prepareScene() {
-    //console.log("prepare scene starts")
+    ////console.log("prepare scene starts")
     setupContainer(1, 0.5)
     setupContainer(2, 0.5)
     var rendering1 = setupRendering(1)
@@ -329,10 +334,13 @@ function prepareScene() {
     renderer2 = rendering2[1]
     mapper2 = rendering2[2]
     actor2 = rendering2[3]
-    //console.log("prepare scene done")
+    ////console.log("prepare scene done")
 }
 function visualise(polydata1, polydata2){
-    mapper1.setInputData(polydata1);
+    if(document.getElementById("selector1").value==0)
+        mapper1.setInputData(polydata1);
+    else
+        mapper1.setInputData(window["asmSurface1"])
 
     renderer1.addActor(actor1);
     //renderer.setBackground(0.9,0.9,0.9)
@@ -340,7 +348,10 @@ function visualise(polydata1, polydata2){
     renderer1.resetCamera();
     renderWindow1.render();
 
-    mapper2.setInputData(polydata2);
+    if(document.getElementById("selector2").value==0)
+        mapper2.setInputData(polydata2);
+    else
+        mapper2.setInputData(window["asmSurface2"])
 
     renderer2.addActor(actor2);
     //renderer.setBackground(0.9,0.9,0.9)
@@ -351,7 +362,7 @@ function visualise(polydata1, polydata2){
 function sendPointCloud(pointArray, cntnr_nr){
     // POST
     var current = new Date()
-    console.log("packing and sending point cloud #"+cntnr_nr+" at "+current+":"+current.getTime());
+    //console.log("packing and sending point cloud #"+cntnr_nr+" at "+current+":"+current.getTime());
     fetch(url, {
 
         // Declare what type of data we're sending
@@ -368,30 +379,28 @@ function sendPointCloud(pointArray, cntnr_nr){
         }        )
     }).then(function (response) { // At this point, Flask has printed our JSON
         current = new Date()
-        console.log("response received for surface #"+cntnr_nr+" at "+current+":"+current.getTime());
+        //console.log("response received for surface #"+cntnr_nr+" at "+current+":"+current.getTime());
         return response.text();
     }).then(function (text) {
 
-        console.log('POST response: ');
+        //console.log('POST response: ');
 
         // Should be 'OK' if everything was successful
         window["surface"+cntnr_nr] = JSON.parse(text);
         window["asmSurface"+cntnr_nr] = assembleSurface(window["surface"+cntnr_nr]["points"], window["surface"+cntnr_nr]["cells"], window["surface"+cntnr_nr]["normals"])
-        console.log("window surface "+cntnr_nr+" has been received")
+        //console.log("window surface "+cntnr_nr+" has been received")
 
-        visualise(window["asmSurface1"], window["asmSurface2"])
+        visualise(window["polyDataTemp1"], window["polyDataTemp2"])
     });
 }
 const reader = vtkSTLReader.newInstance();
-function visualizeSurface(){
 
-}
 //function visualizeSurface(){}
 prepareScene()
 setupController(1)
 setupController(2)
 visualise(polyData, polyData4)
-visualizeSurface()
+//ace()
 
 //4-interactive working with shape modes
 function refreshVisualization(polyDataTemp1, polyDataTemp2){
