@@ -50,6 +50,7 @@ class ReconstructSurface:
         cf.SetInputConnection(surf.GetOutputPort())
         cf.SetValue(0, 0.0)
 
+
         # Sometimes the contouring algorithm can create a volume whose gradient
         # vector and ordering of polygon (using the right hand rule) are
         # inconsistent. vtkReverseSense cures this problem.
@@ -99,12 +100,13 @@ class ReconstructSurface:
         # sphereSource.Update()
 
         # Write the stl file to disk
-        stlWriter = vtk.vtkSTLWriter()
-        print(f"surface num #{self.cntr_nr} built at {current_time}:{int(round(time.time() * 1000))}")
-        stlWriter.SetFileName(data_folder + "resultingMesh"+str(self.cntr_nr)+".stl")
-        print(f"surface num #{self.cntr_nr} written at {current_time}:{int(round(time.time() * 1000))}")
-        stlWriter.SetInputConnection(cf.GetOutputPort())
-        stlWriter.Write()
+        #stlWriter = vtk.vtkSTLWriter()
+        #print(f"surface num #{self.cntr_nr} built at {current_time}:{int(round(time.time() * 1000))}")
+        #stlWriter.SetFileName(data_folder + "resultingMesh"+str(self.cntr_nr)+".stl")
+        #print(f"surface num #{self.cntr_nr} written at {current_time}:{int(round(time.time() * 1000))}")
+        #stlWriter.SetInputConnection(cf.GetOutputPort())
+        #stlWriter.Write()
+
 
         return cf
 

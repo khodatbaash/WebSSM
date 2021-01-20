@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.github.jiconfont:jiconfont-elusive:2.0.2:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.github.jiconfont/jiconfont-elusive/jars/jiconfont-elusive-2.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.github.jiconfont/jiconfont-elusive/srcs/jiconfont-elusive-2.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

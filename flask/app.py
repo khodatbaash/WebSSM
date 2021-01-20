@@ -10,7 +10,9 @@ VTK_DATA_ROOT = vtkGetDataRoot()
 
 #p = vtk.vtkPoint()
 import numpy as np
+import pickle
 app = Flask(__name__)
+
 
 @app.route('/hello', methods=['GET', 'POST'])
 def hello():
@@ -34,13 +36,16 @@ def hello():
         recsurf.cntr_nr = cntr_nr
 
         cf = recsurf.reconstruct()
-        #print(cf)
+        surface = cf.GetOutput()
+        pts,cls,nms = extr_surf_vals(surface)
+
 
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
-        print(f"surface num #{cntr_nr} ready to pickup at {current_time}:{int(round(time.time() * 1000))}")
+        #print(f"surface num #{cntr_nr} ready to pickup at {current_time}:{int(round(time.time() * 1000))}")
 
-        return 'OK', 200
+        response = {"points":pts, "cells":cls, "normals":nms}
+        return response
 
     # GET request
     else:
@@ -143,6 +148,46 @@ def hello():
 # stlWriter.SetFileName(data_folder+"resultingMesh.stl")
 # stlWriter.SetInputConnection(cf.GetOutputPort())
 # stlWriter.Write()
+
+def extr_surf_vals(polyData):
+    numCells = polyData.GetNumberOfPolys()
+    print(f"number of polys: {numCells}")
+    numPoints = polyData.GetNumberOfPoints()
+    print(f"number of points: {numPoints}")
+
+    points = [0.0 for i in range(numPoints*3)]
+    normals = [0.0 for i in range(numPoints*3)]
+    cells = [0 for i in range(numCells*3)]
+    coords = [0.0, 0.0, 0.0]
+
+    cellArray = polyData.GetPolys()
+    cellArray.InitTraversal()
+    for i in range(numCells):
+        idList = vtk.vtkIdList()
+        cellArray.GetNextCell(idList)
+        for j in range(idList.GetNumberOfIds()):
+            id = idList.GetId(j)
+            cells[i*3+j] = id
+
+            polyData.GetPoint(id, coords)
+            points[id * 3 + 0] = coords[0]
+            points[id * 3 + 1] = coords[1]
+            points[id * 3 + 2] = coords[2]
+
+    normalArray = polyData.GetPointData().GetNormals()
+    for i in range(normalArray.GetNumberOfTuples()):
+        normalArray.GetTuple(i, coords)
+
+        normals[i * 3 + 0] = coords[0]
+        normals[i * 3 + 1] = coords[1]
+        normals[i * 3 + 2] = coords[2]
+
+    print(f"points: {type(points)}{len(points)}")
+    print(f"cells: {type(cells)}{len(cells)}")
+    print(f"normals: {type(normals)}{len(normals)}")
+
+    return (points, cells, normals)
+
 
 @app.route('/test')
 def test_page():

@@ -30,6 +30,7 @@ function calculateInstanceMatrix(alpha, stddev, basisMatrix, meanVector, meanSha
 var instancePoints2 = math.reshape(calculateInstanceMatrix(window.alpha1, window.stddev1, window.basisMatrix1, window.meanVector1, window.meanShape1), [window.basisMatrix1.length/3, 3])
 var instancePoints4 = math.reshape(calculateInstanceMatrix(window.alpha2, window.stddev2, window.basisMatrix2, window.meanVector2, window.meanShape2), [window.basisMatrix2.length/3, 3])
 
+var surface1, surface2;
 //2-turn instance matrix to a vtk point cloud
 import vtkPoints from 'vtk.js/Sources/Common/Core/Points'
 import vtkCellArray from 'vtk.js/Sources/Common/Core/CellArray'
@@ -40,28 +41,22 @@ function instanceMatrix2vtkPolydata(instancePoints, cntnr_nr){
     let points = null
     let pointCells = null;
 
-    // let colors = vtk.vtkUnsignedCharArray()
-    // colors.SetNumberOfComponents(3)
-    // colors.SetNumberOfTuples(instancePoints.length)
-
     const polydata = vtkPolyData.newInstance();
     for (var i = 0; i < instancePoints.length; i++) {
-        //Point
+        //Points
         pointArray.push(instancePoints[i][0]);
         pointArray.push(instancePoints[i][1]);
         pointArray.push(instancePoints[i][2]);
-        //Cell
+        //Cells
         cellArray.push(1);
+        cellArray.push(i);
         /*
         if(i==0)
             cellArray.push(instancePoints.length-1)
         else
             cellArray.push(i-1)
         */
-        cellArray.push(i);
     }
-    //console.log(pointArray)
-
 
     points = vtkPoints.newInstance({ values: Float32Array.from(pointArray) });
     pointCells = vtkCellArray.newInstance({ values: Uint16Array.from(cellArray) });
@@ -72,14 +67,52 @@ function instanceMatrix2vtkPolydata(instancePoints, cntnr_nr){
     polydata.setLines(pointCells)
     */
 
-    //console.log(points)
-    //console.log(JSON.stringify(points))
-    // var delayInMilliseconds = 1000; //1 second
-    //
-    // setTimeout(function() {
-    //     //your code to be executed after 1 second
-    // }, delayInMilliseconds);
     sendPointCloud(pointArray, cntnr_nr)
+    return polydata
+}
+function assembleSurface(bufPoints, bufCells, bufNormals){
+    const pointArray = [];
+    const cellArray = [];
+    const normalArray = [];
+
+    let points = null
+    let cells = null;
+    let normals = null;
+
+    const polydata = vtkPolyData.newInstance();
+
+    for (var i = 0; i < bufPoints.length/3; i++) {
+        //Points
+        pointArray.push(bufPoints[i*3]);
+        pointArray.push(bufPoints[i*3+1]);
+        pointArray.push(bufPoints[i*3+2]);
+    }
+    for (var i = 0; i < bufCells.length/3; i++) {
+        //Cells
+        cellArray.push(3);
+        cellArray.push(bufCells[i*3]);
+        cellArray.push(bufCells[i*3+1]);
+        cellArray.push(bufCells[i*3+2]);
+    }
+    for (var i = 0; i < bufNormals.length/3; i++) {
+        //Points
+        normalArray.push(bufNormals[i*3]);
+        normalArray.push(bufNormals[i*3+1]);
+        normalArray.push(bufNormals[i*3+2]);
+    }
+
+    points = vtkPoints.newInstance({ values: Float32Array.from(pointArray) });
+    cells = vtkCellArray.newInstance({ values: Uint16Array.from(cellArray) });
+    normals = vtkPoints.newInstance({ values: Float32Array.from(normalArray) });
+
+    polydata.setPoints(points);
+    polydata.setPolys(cells);
+    polydata.getPointData().setNormals(normals)
+//    polydata.setNormals(normals)
+    //polydata.getPoints().setnormal(normals)
+
+    window['surface'] = polydata
+    console.log("surface assembled")
     return polydata
 }
 var polyData = instanceMatrix2vtkPolydata(instancePoints2, 1)
@@ -144,7 +177,7 @@ function setupController(containerId){
             window["polyDataTemp1"] = polyData
             window["polyDataTemp2"] = polyData4
             instancePointsTemp = math.reshape(calculateInstanceMatrix(window[("alpha"+containerId)], window[("stddev"+containerId)], window[("basisMatrix"+containerId)], window[("meanVector"+containerId)], window[("meanShape"+containerId)]), [window[("basisMatrix"+containerId)].length/3, 3])
-            window["polyDataTemp"+containerId] = instanceMatrix2vtkPolydata(instancePointsTemp)
+            window["polyDataTemp"+containerId] = instanceMatrix2vtkPolydata(instancePointsTemp, containerId)
             refreshVisualization(window["polyDataTemp1"], window["polyDataTemp2"]);
 })
     buttons_div.appendChild(btnMean)
@@ -166,7 +199,7 @@ function setupController(containerId){
             window["polyDataTemp1"] = polyData
             window["polyDataTemp2"] = polyData4
             instancePointsTemp = math.reshape(calculateInstanceMatrix(window[("alpha"+containerId)], window[("stddev"+containerId)], window[("basisMatrix"+containerId)], window[("meanVector"+containerId)], window[("meanShape"+containerId)]), [window[("basisMatrix"+containerId)].length/3, 3])
-            window["polyDataTemp"+containerId] = instanceMatrix2vtkPolydata(instancePointsTemp)
+            window["polyDataTemp"+containerId] = instanceMatrix2vtkPolydata(instancePointsTemp, containerId)
             refreshVisualization(window["polyDataTemp1"], window["polyDataTemp2"]);
         })
     buttons_div.appendChild(btnRnd)
@@ -216,7 +249,7 @@ function setup_sm(container_nr, sm_nr){
         window["polyDataTemp2"] = polyData4
         instancePointsTemp = math.reshape(calculateInstanceMatrix(window[("alpha"+container_nr)], window[("stddev"+container_nr)], window[("basisMatrix"+container_nr)], window[("meanVector"+container_nr)], window[("meanShape"+container_nr)]), [window[("basisMatrix"+container_nr)].length/3, 3])
         //console.log("polyDataTemp"+container_nr+"sm"+sm_nr)
-        window["polyDataTemp"+container_nr] = instanceMatrix2vtkPolydata(instancePointsTemp)
+        window["polyDataTemp"+container_nr] = instanceMatrix2vtkPolydata(instancePointsTemp, container_nr)
         refreshVisualization(window["polyDataTemp1"], window["polyDataTemp2"]);
     });
     sm_rng.setAttribute("style", "position: absolute; left: 25%; width: 60%; height: 100%; border: 0px solid #73AD21;")
@@ -342,31 +375,23 @@ function sendPointCloud(pointArray, cntnr_nr){
         console.log('POST response: ');
 
         // Should be 'OK' if everything was successful
-        console.log(text);
+        window["surface"+cntnr_nr] = JSON.parse(text);
+        window["asmSurface"+cntnr_nr] = assembleSurface(window["surface"+cntnr_nr]["points"], window["surface"+cntnr_nr]["cells"], window["surface"+cntnr_nr]["normals"])
+        console.log("window surface "+cntnr_nr+" has been received")
+
+        visualise(window["asmSurface1"], window["asmSurface2"])
     });
 }
 const reader = vtkSTLReader.newInstance();
 function visualizeSurface(){
 
-
-
-    mapper.setInputConnection(reader.getOutputPort());
-
-    reader
-        .setUrl(`http://www.ozeki.hu/attachments/16/Stanford_Bunny_sample.stl`, { binary: true })
-        // file:///E:/projects/web_ssm/code/server/resultingMesh.stl
-        .then(() => {
-            renderer.addActor(actor);
-            resetCamera();
-            render();
-        });
 }
 //function visualizeSurface(){}
 prepareScene()
 setupController(1)
 setupController(2)
 visualise(polyData, polyData4)
-//visualizeSurface()
+visualizeSurface()
 
 //4-interactive working with shape modes
 function refreshVisualization(polyDataTemp1, polyDataTemp2){

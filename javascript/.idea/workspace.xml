@@ -40,6 +40,13 @@
       <change afterPath="$PROJECT_DIR$/../../web/project-dualView+surface/dist/stddev2.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../web/project-dualview/src/controller2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flask/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../flask/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flask/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../flask/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flask/reconstructSurface.py" beforeDir="false" afterPath="$PROJECT_DIR$/../flask/reconstructSurface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cone.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cone.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../flask/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../flask/.idea/flask.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../flask/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
@@ -896,7 +903,7 @@
         <entry key="$PROJECT_DIR$/../../.." value="point_cloud_visibler" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1iohMh6znoOUo5DDXcgrutb0wQB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -961,7 +968,8 @@
       <workItem from="1609662086454" duration="110000" />
       <workItem from="1609662697843" duration="6813000" />
       <workItem from="1609679914010" duration="38071000" />
-      <workItem from="1610534282933" duration="751000" />
+      <workItem from="1610534282933" duration="1530000" />
+      <workItem from="1610631256725" duration="15293000" />
     </task>
     <servers />
   </component>
@@ -1007,9 +1015,10 @@
     <state x="280" y="48" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1603868171653" />
     <state x="462" y="224" key="SettingsEditor/0.0.1920.1160/-1920.0.1920.1160@0.0.1920.1160" timestamp="1602606613835" />
     <state x="420" y="73" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1609662096391" />
-    <state x="624" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1602608314123">
+    <state x="624" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1610972953300">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="624" y="259" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160/-1920.0.1920.1160@0.0.1920.1160" timestamp="1602608314123" />
+    <state x="624" y="259" width="672" height="678" key="search.everywhere.popup/0.0.1920.1160@0.0.1920.1160" timestamp="1610972953300" />
   </component>
 </project>
