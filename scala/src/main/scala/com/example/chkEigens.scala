@@ -15,9 +15,9 @@ object chkEigens{
   def main(args: Array[String]): Unit = {
     scalismo.initialize()
 
-    val dir = "D:\\data\\webSSM\\dualview\\"
+    val dir = "D:\\data\\webSSM\\talus\\"
     val modelPath = dir+"talus.h5"
-    val meshPath = dir+"talus.stl"
+    val meshPath = dir+"talus.vtk"
 
     val ssm = StatismoIO.readStatismoMeshModel(new File(modelPath)).get
     val mesh = MeshIO.readMesh(new File(meshPath)).get

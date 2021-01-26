@@ -1,6 +1,7 @@
 //const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const url = "http://127.0.0.1:5000/hello"
 import vtkSTLReader from 'vtk.js/Sources/IO/Geometry/STLReader';
+import vtkSTLWriter from 'vtk.js/Sources/IO/Geometry/STLWriter';
 
 //1- generate instance matrix point cloud
 import {create, all} from 'mathjs'
@@ -12,16 +13,16 @@ for (let i=0; i<window.alpha2[0].length; i++){
     window.alpha2[0][i]=0
 }
 function calculateInstanceMatrix(alpha, stddev, basisMatrix, meanVector, meanShape){
-    ////console.log("alpha : "+alpha.length+"*"+alpha[0].length)
-    ////console.log("stddev : "+stddev.length+"*"+stddev[0].length)
+    //////console.log("alpha : "+alpha.length+"*"+alpha[0].length)
+    //////console.log("stddev : "+stddev.length+"*"+stddev[0].length)
     var alpha_mul_stddev2 = math.dotMultiply(alpha, stddev); //1*16
 
-    ////console.log("basisMatrix : "+basisMatrix.length+"*"+basisMatrix[0].length)
+    //////console.log("basisMatrix : "+basisMatrix.length+"*"+basisMatrix[0].length)
     var basis_transposed2 = math.transpose(basisMatrix); //16*window.basisMatrix1.length
-    ////console.log("basis_transposed2 : "+basis_transposed2.length+"*"+basis_transposed2[0].length)
+    //////console.log("basis_transposed2 : "+basis_transposed2.length+"*"+basis_transposed2[0].length)
 
-    ////console.log("alpha_mul_stddev2 : "+alpha_mul_stddev2.length+"*"+alpha_mul_stddev2[0].length)
-    ////console.log("basis_transposed2 : "+basis_transposed2.length+"*"+basis_transposed2[0].length)
+    //////console.log("alpha_mul_stddev2 : "+alpha_mul_stddev2.length+"*"+alpha_mul_stddev2[0].length)
+    //////console.log("basis_transposed2 : "+basis_transposed2.length+"*"+basis_transposed2[0].length)
     var alstd_mul_bastran2 = math.multiply(alpha_mul_stddev2, basis_transposed2);
     var alstd_mulbastran_add_meaVec2 = math.add(alstd_mul_bastran2,meanVector)
     var instance2 = math.add(alstd_mulbastran_add_meaVec2, math.reshape(meanShape, [1,basisMatrix.length]))
@@ -35,6 +36,12 @@ var surface1, surface2;
 import vtkPoints from 'vtk.js/Sources/Common/Core/Points'
 import vtkCellArray from 'vtk.js/Sources/Common/Core/CellArray'
 import vtkPolyData from 'vtk.js/Sources/Common/DataModel/PolyData'
+window["writer1"] = vtkSTLWriter.newInstance()
+window["writer2"] = vtkSTLWriter.newInstance()
+window["blob1"] = 0
+window["blob2"] = 0
+window["fileContents1"] = 0
+window["fileContents2"] = 0
 function instanceMatrix2vtkPolydata(instancePoints, cntnr_nr){
     const pointArray = [];
     const cellArray = [];
@@ -71,6 +78,7 @@ function instanceMatrix2vtkPolydata(instancePoints, cntnr_nr){
     return polydata
 }
 function assembleSurface(bufPoints, bufCells, bufNormals){
+    //console.log("started assembling surface")
     const pointArray = [];
     const cellArray = [];
     const normalArray = [];
@@ -253,7 +261,7 @@ function setup_sm(container_nr, sm_nr){
         //window["polyDataTemp1"] = polyData
         //window["polyDataTemp2"] = polyData4
         instancePointsTemp = math.reshape(calculateInstanceMatrix(window[("alpha"+container_nr)], window[("stddev"+container_nr)], window[("basisMatrix"+container_nr)], window[("meanVector"+container_nr)], window[("meanShape"+container_nr)]), [window[("basisMatrix"+container_nr)].length/3, 3])
-        ////console.log("polyDataTemp"+container_nr+"sm"+sm_nr)
+        //////console.log("polyDataTemp"+container_nr+"sm"+sm_nr)
         window["polyDataTemp"+container_nr] = instanceMatrix2vtkPolydata(instancePointsTemp, container_nr)
         refreshVisualization(window["polyDataTemp1"], window["polyDataTemp2"]);
     });
@@ -264,7 +272,16 @@ function setup_sm(container_nr, sm_nr){
     sm_input.min = "-3"
     sm_input.max = "3"
     sm_input.step = "0.1"
-    sm_input.addEventListener('input', function (){sm_rng.value = sm_input.value;}, true)
+    sm_input.addEventListener('input', function (){
+        sm_rng.value = sm_input.value;
+        window[("alpha"+container_nr)][0][sm_nr] = sm_rng.value
+        //window["polyDataTemp1"] = polyData
+        //window["polyDataTemp2"] = polyData4
+        instancePointsTemp = math.reshape(calculateInstanceMatrix(window[("alpha"+container_nr)], window[("stddev"+container_nr)], window[("basisMatrix"+container_nr)], window[("meanVector"+container_nr)], window[("meanShape"+container_nr)]), [window[("basisMatrix"+container_nr)].length/3, 3])
+        //////console.log("polyDataTemp"+container_nr+"sm"+sm_nr)
+        window["polyDataTemp"+container_nr] = instanceMatrix2vtkPolydata(instancePointsTemp, container_nr)
+        refreshVisualization(window["polyDataTemp1"], window["polyDataTemp2"]);
+        }, true)
     sm_input.setAttribute("style", "position: absolute; left: 85%; width: 15%; height: 100%; border: 0px solid #73AD21;")
     smode_div_i.appendChild(sm_input)
     return smode_div_i
@@ -286,6 +303,18 @@ function setupContainer(containerId, containerHeight){
     const canvas = document.createElement("div") //document.createElement("div")
     canvas.setAttribute("class","canvas"+containerId)
     canvas.setAttribute("style", "position: absolute; left:25%; width: 75%; height: 100%; border: 0px solid #73AD21;")
+
+    const a = window.document.createElement("a")
+    a.setAttribute("id", "a"+containerId)
+    a.href = 'salam'
+    a.download = 'shape'+containerId+'.stl'
+    a.text = 'Download'
+    a.style.position = 'absolute'
+    a.style.left = '50%'
+    a.style.bottom = '10px'
+    canvas.appendChild(a)
+    a.style.background = 'white'
+    a.style.padding = '5px'
     container.appendChild(canvas)
 
 }
@@ -320,7 +349,7 @@ function setupRendering(containerId){
 var renderWindow1, renderer1, mapper1, actor1;
 var renderWindow2, renderer2, mapper2, actor2;
 function prepareScene() {
-    ////console.log("prepare scene starts")
+    //////console.log("prepare scene starts")
     setupContainer(1, 0.5)
     setupContainer(2, 0.5)
     var rendering1 = setupRendering(1)
@@ -334,7 +363,7 @@ function prepareScene() {
     renderer2 = rendering2[1]
     mapper2 = rendering2[2]
     actor2 = rendering2[3]
-    ////console.log("prepare scene done")
+    //////console.log("prepare scene done")
 }
 function visualise(polydata1, polydata2){
     if(document.getElementById("selector1").value==0)
@@ -353,6 +382,7 @@ function visualise(polydata1, polydata2){
     else
         mapper2.setInputData(window["asmSurface2"])
 
+
     renderer2.addActor(actor2);
     //renderer.setBackground(0.9,0.9,0.9)
 
@@ -362,7 +392,7 @@ function visualise(polydata1, polydata2){
 function sendPointCloud(pointArray, cntnr_nr){
     // POST
     var current = new Date()
-    //console.log("packing and sending point cloud #"+cntnr_nr+" at "+current+":"+current.getTime());
+    ////console.log("packing and sending point cloud #"+cntnr_nr+" at "+current+":"+current.getTime());
     fetch(url, {
 
         // Declare what type of data we're sending
@@ -379,21 +409,25 @@ function sendPointCloud(pointArray, cntnr_nr){
         }        )
     }).then(function (response) { // At this point, Flask has printed our JSON
         current = new Date()
-        //console.log("response received for surface #"+cntnr_nr+" at "+current+":"+current.getTime());
+        ////console.log("response received for surface #"+cntnr_nr+" at "+current+":"+current.getTime());
         return response.text();
     }).then(function (text) {
-
-        //console.log('POST response: ');
-
+        ////console.log('POST response: ');
         // Should be 'OK' if everything was successful
         window["surface"+cntnr_nr] = JSON.parse(text);
         window["asmSurface"+cntnr_nr] = assembleSurface(window["surface"+cntnr_nr]["points"], window["surface"+cntnr_nr]["cells"], window["surface"+cntnr_nr]["normals"])
         //console.log("window surface "+cntnr_nr+" has been received")
-
-        visualise(window["polyDataTemp1"], window["polyDataTemp2"])
+        window["writer"+cntnr_nr] = vtkSTLWriter.newInstance()
+        window["writer"+cntnr_nr].setInputData(window["asmSurface"+cntnr_nr]);
+        window["fileContents"+cntnr_nr] = window["writer"+cntnr_nr].getOutputData();
+        window["blob"+cntnr_nr] = new Blob([window["fileContents"+cntnr_nr]], {type: 'application/octet-steam',});
+        document.getElementById("a"+cntnr_nr).href = window.URL.createObjectURL(window["blob"+cntnr_nr], {
+            type: 'application/octet-steam',});
+        visualise(window["polyDataTemp1"], window["polyDataTemp2"]);
     });
 }
 const reader = vtkSTLReader.newInstance();
+
 
 //function visualizeSurface(){}
 prepareScene()

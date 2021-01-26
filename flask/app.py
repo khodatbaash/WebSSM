@@ -21,15 +21,15 @@ def hello():
     if request.method == 'POST':
         now = datetime.now()
 
-        print('Incoming..')
-        #print(type(request.get_json()["array"][0]))  # parse as JSON
-        print(request.get_json()["cntr_nr"])
+        #print('Incoming..')
+        
+        #print(request.get_json()["cntr_nr"])
         points_array = request.get_json()["array"]
         cntr_nr = request.get_json()["cntr_nr"]
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
-        print(f"received point cloud #{cntr_nr} at {current_time}:{int(round(time.time() * 1000))}")
-        print(len(points_array))
+        #print(f"received point cloud #{cntr_nr} at {current_time}:{int(round(time.time() * 1000))}")
+        #print(len(points_array))
 
         recsurf = ReconstructSurface()
         recsurf.pts = points_array
@@ -42,7 +42,6 @@ def hello():
 
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
-        #print(f"surface num #{cntr_nr} ready to pickup at {current_time}:{int(round(time.time() * 1000))}")
 
         response = {"points":pts, "cells":cls, "normals":nms}
         return response
@@ -151,9 +150,9 @@ def hello():
 
 def extr_surf_vals(polyData):
     numCells = polyData.GetNumberOfPolys()
-    print(f"number of polys: {numCells}")
+    #print(f"number of polys: {numCells}")
     numPoints = polyData.GetNumberOfPoints()
-    print(f"number of points: {numPoints}")
+    #print(f"number of points: {numPoints}")
 
     points = [0.0 for i in range(numPoints*3)]
     normals = [0.0 for i in range(numPoints*3)]
@@ -182,9 +181,9 @@ def extr_surf_vals(polyData):
         normals[i * 3 + 1] = coords[1]
         normals[i * 3 + 2] = coords[2]
 
-    print(f"points: {type(points)}{len(points)}")
-    print(f"cells: {type(cells)}{len(cells)}")
-    print(f"normals: {type(normals)}{len(normals)}")
+    #print(f"points: {type(points)}{len(points)}")
+    #print(f"cells: {type(cells)}{len(cells)}")
+    #print(f"normals: {type(normals)}{len(normals)}")
 
     return (points, cells, normals)
 
