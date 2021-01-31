@@ -18,6 +18,7 @@ object chkEigens{
     val dir = "D:\\data\\webSSM\\talus\\"
     val modelPath = dir+"talus.h5"
     val meshPath = dir+"talus.vtk"
+    val shape_name = "talus"
 
     val ssm = StatismoIO.readStatismoMeshModel(new File(modelPath)).get
     val mesh = MeshIO.readMesh(new File(meshPath)).get
@@ -28,10 +29,10 @@ object chkEigens{
     val meanShape = ssm.mean
     val alpha = ssm.coefficients(mesh)
 
-    breeze.linalg.csvwrite(new File(dir+"alpha_femur.csv"), alpha.toDenseMatrix, separator = ',')
-    breeze.linalg.csvwrite(new File(dir+"stddev_femur.csv"), stddev.toDenseMatrix, separator = ',')
-    breeze.linalg.csvwrite(new File(dir+"basisMatrix_femur.csv"), basisMatrix, separator = ',')
-    breeze.linalg.csvwrite(new File(dir+"meanVector_femur.csv"), meanVector.toDenseMatrix, separator = ',')
+    breeze.linalg.csvwrite(new File(dir+"alpha_"+shape_name+".csv"), alpha.toDenseMatrix, separator = ',')
+    breeze.linalg.csvwrite(new File(dir+"stddev_"+shape_name+".csv"), stddev.toDenseMatrix, separator = ',')
+    breeze.linalg.csvwrite(new File(dir+"basisMatrix_"+shape_name+".csv"), basisMatrix, separator = ',')
+    breeze.linalg.csvwrite(new File(dir+"meanVector_"+shape_name+".csv"), meanVector.toDenseMatrix, separator = ',')
 
     val meanShapePointsIterator = meanShape.pointSet.points.zipWithIndex.map{case(p, i) => (p.x, p.y, p.z)}
     var result = ""
@@ -40,7 +41,7 @@ object chkEigens{
       result = result + next._1 + ","+ next._2 + "," + next._3 + "\n"
     }
 
-    val meanShapeFilepath = dir+"meanShape_femur.csv"
+    val meanShapeFilepath = dir+"meanShape_"+shape_name+".csv"
     val outputFile = new File(meanShapeFilepath)
     val bw = new BufferedWriter(new FileWriter(outputFile))
     bw.write(result)

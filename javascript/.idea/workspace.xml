@@ -26,13 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55cb6356-cf93-43b1-a6c9-f035ea47087f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../flask/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../flask/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cone.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/cone.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../scala/src/main/scala/com/example/chkEigens.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../scala/src/main/scala/com/example/chkEigens.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scala/target/scala-2.12/classes/META-INF/minimal-scalismo-seed.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scala/src/main/scala/com/example/chkEigens_sample.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../scala/src/main/scala/com/example/chkEigens_sample.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../scala/target/scala-2.12/classes/com/example/chkEigens$.class" beforeDir="false" afterPath="$PROJECT_DIR$/../scala/target/scala-2.12/classes/com/example/chkEigens$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scala/target/scala-2.12/classes/com/example/chkEigens_sample$.class" beforeDir="false" afterPath="$PROJECT_DIR$/../scala/target/scala-2.12/classes/com/example/chkEigens_sample$.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +118,8 @@
       <workItem from="1609662697843" duration="6813000" />
       <workItem from="1609679914010" duration="38071000" />
       <workItem from="1610534282933" duration="1530000" />
-      <workItem from="1610631256725" duration="34044000" />
+      <workItem from="1610631256725" duration="34047000" />
+      <workItem from="1611985601466" duration="2289000" />
     </task>
     <servers />
   </component>

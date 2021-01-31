@@ -254,7 +254,7 @@ function setup_sm(container_nr, sm_nr){
     sm_rng.min = "-3"
     sm_rng.max = "3"
     sm_rng.value = "0"
-    sm_rng.step = "any"
+    sm_rng.step = "0.5"
     sm_rng.addEventListener('input', (e) => {
         sm_input.value = sm_rng.value;
         window[("alpha"+container_nr)][0][sm_nr] = sm_rng.value
@@ -271,7 +271,7 @@ function setup_sm(container_nr, sm_nr){
     sm_input.value = "0"
     sm_input.min = "-3"
     sm_input.max = "3"
-    sm_input.step = "0.1"
+    sm_input.step = "0.5"
     sm_input.addEventListener('input', function (){
         sm_rng.value = sm_input.value;
         window[("alpha"+container_nr)][0][sm_nr] = sm_rng.value

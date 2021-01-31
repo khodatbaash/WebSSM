@@ -44,6 +44,7 @@ class ReconstructSurface:
         # Read some points. Use a programmable filter to read them.
         # Construct the surface and create isosurface.
         surf = vtk.vtkSurfaceReconstructionFilter()
+        surf.SetSampleSpacing(1)
         surf.SetInputConnection(self.pointSource.GetOutputPort())
 
         cf = vtk.vtkContourFilter()
