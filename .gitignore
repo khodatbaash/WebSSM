@@ -1,4 +1,5 @@
 flask/*.stl
+flask/.idea
 flask/__pycache__
 flask/__pycache__/*
 flask/templates
@@ -10,11 +11,14 @@ javascript/.idea
 javascript/.idea/*
 javascript/pack*
 javascript/webpack*
+javascirpt/jqu*
+javascript/read_csv.js
 scala/.idea
 scala/project
 scala/target
 scala/tutorial
-scala/actvator.properties
+scala/activator.properties
+scala/hs_err_pid7520.log
 scala/build.sbt
-scala/LICENCE
+scala/LICENSE
 scala/README.md
