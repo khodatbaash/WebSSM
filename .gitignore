@@ -11,7 +11,8 @@ javascript/.idea
 javascript/.idea/*
 javascript/pack*
 javascript/webpack*
-javascirpt/src/jqu*
+javascirpt/src/jquery-csv.js
+javascirpt/src/jquery.csv.min.js
 javascript/src/read_csv.js
 scala/.idea
 scala/project
