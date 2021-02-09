@@ -20,29 +20,26 @@ def hello():
     # POST request
     if request.method == 'POST':
         now = datetime.now()
-        response = {'points':'salam'}
+
+        points_array = request.get_json()["array"]
+        cntr_nr = request.get_json()["cntr_nr"]
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+
+        recsurf = ReconstructSurface()
+        recsurf.pts = points_array
+        recsurf.cntr_nr = cntr_nr
+
+        cf = recsurf.reconstruct()
+        surface = cf.GetOutput()
+        pts,cls,nms = extr_surf_vals(surface)
+
+
+        now = datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+
+        response = {"points":pts, "cells":cls, "normals":nms}
         return response
-
-
-        # points_array = request.get_json()["array"]
-        # cntr_nr = request.get_json()["cntr_nr"]
-        # now = datetime.now()
-        # current_time = now.strftime("%H:%M:%S")
-        #
-        # recsurf = ReconstructSurface()
-        # recsurf.pts = points_array
-        # recsurf.cntr_nr = cntr_nr
-        #
-        # cf = recsurf.reconstruct()
-        # surface = cf.GetOutput()
-        # pts,cls,nms = extr_surf_vals(surface)
-        #
-        #
-        # now = datetime.now()
-        # current_time = now.strftime("%H:%M:%S")
-
-        # response = {"points":pts, "cells":cls, "normals":nms}
-        # return response
 
     # GET request
     else:
