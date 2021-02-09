@@ -20,31 +20,29 @@ def hello():
     # POST request
     if request.method == 'POST':
         now = datetime.now()
-
-        #print('Incoming..')
-        
-        #print(request.get_json()["cntr_nr"])
-        points_array = request.get_json()["array"]
-        cntr_nr = request.get_json()["cntr_nr"]
-        now = datetime.now()
-        current_time = now.strftime("%H:%M:%S")
-        #print(f"received point cloud #{cntr_nr} at {current_time}:{int(round(time.time() * 1000))}")
-        #print(len(points_array))
-
-        recsurf = ReconstructSurface()
-        recsurf.pts = points_array
-        recsurf.cntr_nr = cntr_nr
-
-        cf = recsurf.reconstruct()
-        surface = cf.GetOutput()
-        pts,cls,nms = extr_surf_vals(surface)
-
-
-        now = datetime.now()
-        current_time = now.strftime("%H:%M:%S")
-
-        response = {"points":pts, "cells":cls, "normals":nms}
+        response = {'points':'salam'}
         return response
+
+
+        # points_array = request.get_json()["array"]
+        # cntr_nr = request.get_json()["cntr_nr"]
+        # now = datetime.now()
+        # current_time = now.strftime("%H:%M:%S")
+        #
+        # recsurf = ReconstructSurface()
+        # recsurf.pts = points_array
+        # recsurf.cntr_nr = cntr_nr
+        #
+        # cf = recsurf.reconstruct()
+        # surface = cf.GetOutput()
+        # pts,cls,nms = extr_surf_vals(surface)
+        #
+        #
+        # now = datetime.now()
+        # current_time = now.strftime("%H:%M:%S")
+
+        # response = {"points":pts, "cells":cls, "normals":nms}
+        # return response
 
     # GET request
     else:
