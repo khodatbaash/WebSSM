@@ -1,5 +1,5 @@
 //const proxyurl = "https://cors-anywhere.herokuapp.com/";
-const url = "http://127.0.0.1:5000/hello"
+const url = "http://ankleshapemodels.com/api" //"http://104.248.196.108/hello"
 import vtkSTLReader from 'vtk.js/Sources/IO/Geometry/STLReader';
 import vtkSTLWriter from 'vtk.js/Sources/IO/Geometry/STLWriter';
 
@@ -408,6 +408,7 @@ function sendPointCloud(pointArray, cntnr_nr){
             "array":pointArray, "cntr_nr":cntnr_nr
         }        )
     }).then(function (response) { // At this point, Flask has printed our JSON
+
         current = new Date()
         ////console.log("response received for surface #"+cntnr_nr+" at "+current+":"+current.getTime());
         return response.text();
@@ -424,7 +425,8 @@ function sendPointCloud(pointArray, cntnr_nr){
         document.getElementById("a"+cntnr_nr).href = window.URL.createObjectURL(window["blob"+cntnr_nr], {
             type: 'application/octet-steam',});
         visualise(window["polyDataTemp1"], window["polyDataTemp2"]);
-    });
+    }).then(result => console.log(result))
+        .catch(error => console.log('error', error));
 }
 const reader = vtkSTLReader.newInstance();
 

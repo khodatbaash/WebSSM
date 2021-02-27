@@ -183,7 +183,10 @@ def extr_surf_vals(polyData):
     return (points, cells, normals)
 
 
-@app.route('/test')
-def test_page():
-    # look inside `templates` and serve `index.html`
-    return render_template('index.html')
+# @app.route('/test')
+# def test_page():
+#     # look inside `templates` and serve `index.html`
+#     return render_template('index.html')
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
