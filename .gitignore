@@ -4,16 +4,6 @@ flask/__pycache__
 flask/__pycache__/*
 flask/templates
 flask/venv
-javascript/data/*
-javascript/node_modules/
-javascript/dist
-javascript/.idea
-javascript/.idea/*
-javascript/pack*
-javascript/webpack*
-javascirpt/src/jquery-csv.js
-javascirpt/src/jquery.csv.min.js
-javascript/src/read_csv.js
 scala/.idea
 scala/project
 scala/target
